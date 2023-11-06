@@ -64,11 +64,10 @@ for i in range(0,n):
     z0=zi
     u0=ui
 
-min_limit = min(min(X), min(Y), min(Z))
-max_limit = max(max(X), max(Y), max(Z))
-ax.set_xlim(min_limit, max_limit)
-ax.set_ylim(min_limit, max_limit)
-ax.set_zlim(min_limit, max_limit)
+RADIUS = 5 # Control this value.
+ax.set_xlim3d(-RADIUS / 2, RADIUS / 2)
+ax.set_zlim3d(-RADIUS / 2, RADIUS / 2)
+ax.set_ylim3d(-RADIUS / 2, RADIUS / 2)
 
 ax.plot(X,Y,'k')
 ax.plot(-x1,0,'bo',MarkerSize=np.sqrt(M1)*8)

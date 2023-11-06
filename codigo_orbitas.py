@@ -21,9 +21,9 @@ y0=0#posición
 z0=0#velocidadx
 u0=5#velocidady
 
-tf=10#tiempo final
-n=100000#numero de intervalos
-h=tf/n
+tf=1.5#tiempo final
+h=0.000001#numero de paso
+n=tf/h#numero de intervalos
 
 X=[x0]
 Y=[y0]
@@ -42,7 +42,7 @@ def dz(x,y,z,u):
 def du(x,y,z,u):
     return y*w**(2)-(((y)*G*M1)/((x+x1)**(2)+y**(2))**(3/2))-(((y)*G*M2)/((x-x2)**(2)+y**(2))**(3/2))+2*w*z
 
-for i in range(0,n):
+for i in range(0,int(n)):
     k1=dx(x0,y0,z0,u0)
     L1=dy(x0,y0,z0,u0)
     m1=dz(x0,y0,z0,u0)

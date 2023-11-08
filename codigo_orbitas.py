@@ -12,12 +12,12 @@ from mpl_toolkits.mplot3d import axes3d
 G=1
 M1=1
 M2=10
-x1=1
-x2=(M1*x1)/M2
+x1=1#posicion m1
+x2=(M1*x1)/M2#posicion m2
 w=np.sqrt((M1+M2)*G/(x1+x2)**3)
 
-x0=-0.29344173582112392474269213106493#posición
-y0=0#posición
+x0=-0.29344173582112392474269213106493#posiciónX
+y0=0#posiciónY
 z0=0#velocidadx
 u0=5#velocidady
 
